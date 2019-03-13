@@ -3,33 +3,52 @@
 # -------------------------------
 # Set Paths
 # -----------------------------------------------------
-export SBT_HOME="/Users/${user}/Softwares/sbt/sbt-launcher-packaging-0.13.13"
-export SCALA_HOME="/Users/${user}/Softwares/scala/scala-2.11.8"
-export RUST_HOME="/Users/${user}/.cargo"
-export PATH="$SBT_HOME/bin:$SCALA_HOME/bin:$RUST_HOME/bin:$PATH:/usr/local/bin"
-
+export ML_PATH="/Users/jothi/Projects/Private/python-projects/hands-on-ml"
+export SBT_HOME="/Users/jothi/Softwares/sbt/sbt-launcher-packaging-0.13.13"
+export SCALA_HOME="/Users/jothi/Softwares/scala/scala-2.11.8"
+export RUST_HOME="/Users/jothi/.cargo"
+# For Go projects, we set the GOPATH
+export GOROOT="/usr/local/go"
+export GOPATH="/Users/jothi/Projects/Private/go-projects"
+export GODEPS="/Users/jothi/Projects/Private/go-projects/bin/godep"
+# For Python projects
+export PYTHON_HOME="/Library/Frameworks/Python.framework/Versions/3.6"
+export ANACONDA_HOME="/Users/jothi/anaconda2"
+# We set the PATH
+export PATH="$SBT_HOME/bin:$SCALA_HOME/bin:$RUST_HOME/bin:$GOROOT/bin:$PYTHON_HOME/bin:$ANACONDA_HOME/bin:$ML_PATH:$GODEPS:$GOPATH/bin:$PATH:/usr/local/bin"
 # Set Default Editor (change 'Nano' to the editor of your choice)
 # ------------------------------------------------------------
 export EDITOR=/usr/bin/nano
+export TERM=xterm-color
 
 # Set default blocksize for ls, df, du
 # from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
 # ------------------------------------------------------------
 export BLOCKSIZE=1k  
-
+# -----------------------------
+# PROJECT FOLDER ALIAS
+# -----------------------------
+alias ml-projects='cd /Users/jothi/Projects/Private/ml-projects'
+alias go-projects='cd /Users/jothi/Projects/Private/go-projects'
+alias scala-projects='cd /Users/jothi/Projects/Private/scala-projects'
+alias blockchain-projects='cd /Users/jothi/Projects/Private/blockchain-projects'
+alias rust-projects='cd /Users/jothi/Projects/Private/rust-projects'
+alias private-projects='cd /Users/jothi/Projects/Private'
+alias python-projects='/Users/jothi/Projects/Private/python-projects'
+alias plant-simulator='cd /Users/jothi/Projects/Private/scala-projects/plant-simulator'
 # -----------------------------
 # TERMINAL ALIAS
 # -----------------------------
 repl () {
-    ( cd /Users/${user}/Projects/Private/scala-projects/REPLesent && scala -Dscala.color -language:_ -nowarn -i REPLesent.scala )
+    ( cd /Users/jothi/Projects/Private/scala-projects/REPLesent && scala -Dscala.color -language:_ -nowarn -i REPLesent.scala )
 }
-alias sbt-console='/Users/${user}/Projects/Private/scala-projects/sbt-console sbt'
+alias sbt-console='/Users/jothi/Projects/Private/scala-projects/sbt-console sbt'
 alias haskell='ghci'
-alias .='cd /Users/${user}'
+alias .='cd /Users/jothi'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias ll='ls -FGlAhp'
-alias eon='cd /Users/${user}/Projects/Official/eon'
+alias eon='cd /Users/jothi/Projects/Official/eon'
 cd() { builtin cd "$@"; ll; }  # Always list directory contents upon 'cd'
 alias cd..='cd ../'
 alias .1='cd ../'
@@ -39,6 +58,14 @@ alias cls='clear'
 alias path='echo -e ${PATH//:/\\n}'
 alias cic='set completion-ignore-case On' # Make tab completion case insensitive
 mkdircd() { mkdir -p "$1" && cd "$1"; } # Makes new directory and jumps inside
+# -----------------------------------
+# RASPBERRY PI ALIAS
+# -----------------------------------
+alias cctv='ssh -Y joesan@cctv.local'
+alias worker-1='ssh pi@k8s-worker-01.local'
+alias worker-2='ssh pi@k8s-worker-02.local'
+alias worker-3='ssh pi@k8s-worker-03.local'
+alias master-1='ssh pi@k8s-master-01.local'
 
 # lr:  Full Recursive Directory Listing
 # ------------------------------------------
@@ -88,6 +115,30 @@ alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on 
 alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
 alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
-export PATH=$PATH:/Users/${user}/Softwares/azure-cli/bin
+# ---------------------------
+# DOCKER ALIAS
+# ---------------------------
+alias dockerStopAll='docker stop $(docker ps -aq)'
+alias dockerRemoveAll='docker rm $(docker ps -aq)'
 
-source '/Users/${user}/Softwares/azure-cli/az.completion'
+export PATH=$PATH:/Users/jothi/Softwares/azure-cli/bin
+
+source '/Users/jothi/Softwares/azure-cli/az.completion'
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# added by Anaconda2 5.2.0 installer
+export PATH="/anaconda2/bin:$PATH"
+
+# added by Anaconda2 5.2.0 installer
+export PATH="/Users/jothi/anaconda2/bin:$PATH"
