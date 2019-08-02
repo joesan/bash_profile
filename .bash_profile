@@ -7,21 +7,23 @@
 export JAVA_HOME_8_131="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/"
 export JAVA_HOME_8="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/"
 export JAVA_HOME_11="/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/"
-export SBT_HOME="/Users/joesan/Softwares/sbt/sbt-1.2.8"
-export SCALA_HOME="/Users/joesan/Softwares/scala/scala-2.12.7"
+export SBT_HOME="/Users/$USER/Softwares/sbt/sbt-1.2.8"
+export SCALA_HOME="/Users/$USER/Softwares/scala/scala-2.12.7"
+# For C# Projects
+export MONO_HOME="/Library/Frameworks/Mono.framework/Commands/"
 # For Rust projects
-export RUST_HOME="/Users/jothi/.cargo"
+export RUST_HOME="/Users/$USER/.cargo"
 # For Go projects, we set the GOPATH
-export GOROOT="/usr/local/go"
-export GOPATH="/Users/jothi/Projects/Private/go-projects"
-export GODEPS="/Users/jothi/Projects/Private/go-projects/bin/godep"
+export GOROOT="/usr/local/opt/go/libexec"
+export GOPATH="/Users/$USER/Projects/Private/go-projects"
+export GODEPS="/Users/$USER/Projects/Private/go-projects/bin/godep"
 # For Python projects
 export PYTHON_HOME="/Library/Frameworks/Python.framework/Versions/3.6"
-export ANACONDA_HOME="/Users/jothi/anaconda2"
+export ANACONDA_HOME="/Users/$USER/anaconda2"
 # For Apache Maven
-export MAVEN_HOME="/Users/joesan/Softwares/apache/apache-maven-3.6.0"
+export MAVEN_HOME="/Users/$USER/Softwares/apache/apache-maven-3.6.0"
 # We set the PATH
-export PATH="$JAVA_HOME_8_131/bin:$SBT_HOME/bin:$SCALA_HOME/bin:$RUST_HOME/bin:$MAVEN_HOME/bin:$GOROOT/bin:$PYTHON_HOME/bin:$ANACONDA_HOME/bin:$ML_PATH:$GODEPS:$GOPATH/bin:$PATH:/usr/local/bin"
+export PATH="$JAVA_HOME_8_131/bin:$SBT_HOME/bin:$SCALA_HOME/bin:$MONO_HOME:$RUST_HOME/bin:$MAVEN_HOME/bin:$GOROOT/bin:$PYTHON_HOME/bin:$ANACONDA_HOME/bin:$ML_PATH:$GODEPS:$GOPATH/bin:$PATH:/usr/local/bin"
 # Set Default Editor (change 'Nano' to the editor of your choice)
 # ------------------------------------------------------------
 export EDITOR=/usr/bin/nano
@@ -34,28 +36,32 @@ export BLOCKSIZE=1k
 # -----------------------------
 # PROJECT FOLDER ALIAS
 # -----------------------------
-alias ml-projects='cd /Users/joesan/Projects/Private/ml-projects'
-alias go-projects='cd /Users/joesan/Projects/Private/go-projects'
-alias scala-projects='cd /Users/joesan/Projects/Private/scala-projects'
-alias blockchain-projects='cd /Users/joesan/Projects/Private/blockchain-projects'
-alias rust-projects='cd /Users/joesan/Projects/Private/rust-projects'
-alias private-projects='cd /Users/joesan/Projects/Private'
-alias python-projects='/Users/joesan/Projects/Private/python-projects'
-alias plant-simulator='cd /Users/joesan/Projects/Private/scala-projects/plant-simulator'
+alias ua-client='python3 /usr/local/bin/opcua-client'
+alias ml-projects='cd /Users/$USER/Projects/Private/ml-projects'
+alias go-projects='cd /Users/$USER/Projects/Private/go-projects'
+alias scala-projects='cd /Users/$USER/Projects/Private/scala-projects'
+alias blockchain-projects='cd /Users/$USER/Projects/Private/blockchain-projects'
+alias rust-projects='cd /Users/$USER/Projects/Private/rust-projects'
+alias private-projects='cd /Users/$USER/Projects/Private'
+alias python-projects='/Users/$USER/Projects/Private/python-projects'
+alias plant-simulator='cd /Users/$USER/Projects/Private/scala-projects/plant-simulator'
 # -----------------------------
 # TERMINAL ALIAS
 # -----------------------------
 repl () {
-    ( cd /Users/jothi/Projects/Private/scala-projects/REPLesent && scala -Dscala.color -language:_ -nowarn -i REPLesent.scala )
+    ( cd /Users/$USER/Projects/Private/scala-projects/REPLesent && scala -Dscala.color -language:_ -nowarn -i REPLesent.scala )
 }
-alias sbt-console='/Users/jothi/Projects/Private/scala-projects/sbt-console sbt'
+alias lpsolve='/Users/$USER/Softwares/lp_solve_5.5.2.5_exe_osx32/lp_solve'
+alias mqtt='/usr/local/sbin/mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf'
+alias terraform='/Users/$USER/Softwares/terraform/terraform'
+alias sbt-console='/Users/$USER/Projects/Private/scala-projects/sbt-console sbt'
 alias haskell='ghci'
 alias ls='lsd -al'
-alias .='cd /Users/jothi'
+alias .='cd /Users/$USER'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
-alias ll='ls -FGlAhp'
-alias eon='cd /Users/jothi/Projects/Official/eon'
+alias ll='lsd -Fll'
+alias eon-projects='cd /Users/$USER/Projects/Official/eon'
 cd() { builtin cd "$@"; ls; }  # Always list directory contents upon 'cd'
 alias cd..='cd ../'
 alias .1='cd ../'
@@ -123,13 +129,17 @@ alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listenin
 alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
 # ---------------------------
+# K8s ALIAS
+# ---------------------------
+alias kctl='kubectl'
+alias kpods='kubectl get pods --show-labels'
+alias kserv='kubectl get svc'
+
+# ---------------------------
 # DOCKER ALIAS
 # ---------------------------
 alias dockerStopAll='docker stop $(docker ps -aq)'
 alias dockerRemoveAll='docker rm $(docker ps -aq)'
 
 export PATH=$PATH:/Users/jothi/Softwares/azure-cli/bin
-
-source '/Users/jothi/Softwares/azure-cli/az.completion'
-
 export PATH="$HOME/.cargo/bin:$PATH"d
