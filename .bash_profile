@@ -141,5 +141,5 @@ alias kserv='kubectl get svc'
 alias dockerStopAll='docker stop $(docker ps -aq)'
 alias dockerRemoveAll='docker rm $(docker ps -aq)'
 
-export PATH=$PATH:/Users/jothi/Softwares/azure-cli/bin
+export PATH=$PATH:/Users/$USER/Softwares/azure-cli/bin
 export PATH="$HOME/.cargo/bin:$PATH"d
