@@ -20,6 +20,7 @@ export GODEPS="/Users/$USER/Projects/Private/go-projects/bin/godep"
 # For Python projects
 export PYTHON_HOME="/Library/Frameworks/Python.framework/Versions/3.6"
 export ANACONDA_HOME="/Users/$USER/anaconda2"
+export WORKON_HOME="/Users/$USER/Projects/Private/ml-projects/virtualenvs"
 # For Apache Maven
 export MAVEN_HOME="/Users/$USER/Softwares/apache/apache-maven-3.6.0"
 # We set the PATH
@@ -131,8 +132,8 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 # ---------------------------
 # K8s ALIAS
 # ---------------------------
-alias kctl='kubectl'
-alias kpods='kubectl get pods --show-labels'
+alias kl='kubectl'
+alias pods='kubectl get pods --show-labels --all-namespaces'
 alias kserv='kubectl get svc'
 
 # ---------------------------
@@ -141,5 +142,5 @@ alias kserv='kubectl get svc'
 alias dockerStopAll='docker stop $(docker ps -aq)'
 alias dockerRemoveAll='docker rm $(docker ps -aq)'
 
-export PATH=$PATH:/Users/$USER/Softwares/azure-cli/bin
+export PATH=$PATH:/Users/jothi/Softwares/azure-cli/bin
 export PATH="$HOME/.cargo/bin:$PATH"d
