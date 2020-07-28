@@ -2,14 +2,16 @@
 # SOFTWARE PATH & HOME LOCATIONS
 # ----------------------------------------------------------------------------
 export MAVEN_HOME="/opt/softwares/apache-maven-3.6.3"
+export SCALA_HOME="/opt/softwares/scala-2.13.3"
 export SBT_HOME="/opt/softwares/sbt"
 export RUSTUP_HOME="/opt/softwares/rustup"
 export KUBECTL_HOME="/opt/softwares/kubectl"
 export MINIKUBE_HOME="/opt/softwares/minikube"
+export TERRAFORM_HOME="/opt/softwares/terraform"
 
 source /opt/softwares/.kubectl_aliases
 
-export PATH="$SBT_HOME/bin:$MAVEN_HOME/bin:$KUBECTL_HOME:$MINIKUBE_HOME:$PATH:/usr/local/bin"
+export PATH="$SBT_HOME/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$KUBECTL_HOME:$TERRAFORM_HOME:$MINIKUBE_HOME:$PATH:/usr/local/bin"
 
 # ----------------------------------------------------------------------------
 # START / STOP COMMANDS
@@ -29,10 +31,12 @@ alias rust-projects='cd /home/$USER/Projects/Private/rust-projects'
 alias ml-projects='cd /home/$USER/Projects/Private/ml-projects'
 alias go-projects='cd /home/$USER/Projects/Private/go-projects'
 alias scala-projects='cd /home/$USER/Projects/Private/scala-projects'
+alias infra-projects='cd /home/$USER/Projects/Private/infrastructure-projects'
 
 # ----------------------------------------------------------------------------
 # TERMINAL ALIAS
 # ----------------------------------------------------------------------------
+alias cdd='cd; cls'
 alias ls='lsd -al'
 alias sls='sudo lsd -al'
 alias .='cd /Users/$USER'
