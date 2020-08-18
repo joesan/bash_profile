@@ -59,6 +59,7 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 # -----------------------------------------------------------------------------
 # NETWORKING ALIAS
 # -----------------------------------------------------------------------------
+alias hostname='hostname -I'                        # hostname:     Get the Hostname IPV4 & IPV6
 alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address
 alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
 alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
