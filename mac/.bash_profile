@@ -46,6 +46,7 @@ alias rust-projects='cd /Users/$USER/Projects/Private/rust-projects'
 alias private-projects='cd /Users/$USER/Projects/Private'
 alias python-projects='/Users/$USER/Projects/Private/python-projects'
 alias plant-simulator='cd /Users/$USER/Projects/Private/scala-projects/plant-simulator'
+alias ros-projects='cd /home/$USER/Projects/Private/ros-projects'
 # -----------------------------
 # TERMINAL ALIAS
 # -----------------------------
