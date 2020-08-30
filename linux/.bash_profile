@@ -36,6 +36,7 @@ alias ml-projects='cd /home/$USER/Projects/Private/ml-projects'
 alias go-projects='cd /home/$USER/Projects/Private/go-projects'
 alias scala-projects='cd /home/$USER/Projects/Private/scala-projects'
 alias infra-projects='cd /home/$USER/Projects/Private/infrastructure-projects'
+alias ros-projects='cd /home/$USER/Projects/Private/ros-projects'
 
 # ----------------------------------------------------------------------------
 # TERMINAL ALIAS
