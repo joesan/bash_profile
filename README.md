@@ -29,10 +29,10 @@ Perform this to install Rust on a specific folder of your choice (in my case on 
 1. curl https://sh.rustup.rs -sSf | sudo RUSTUP_HOME=/opt/softwares/rustup sh -s -- -y
 
 ## Additional Steps - Install ROS
-Add the following line to source the bash setup file for running ROS
+Add the following line to source the bash setup file (.bash_profile) for running ROS
 
 ```
-source source /opt/ros/noetic/setup.bash
+source /opt/ros/noetic/setup.bash
 ```
 
 
