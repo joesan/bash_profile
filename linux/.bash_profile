@@ -9,7 +9,11 @@ export KUBECTL_HOME="/opt/softwares/kubectl"
 export MINIKUBE_HOME="/opt/softwares/minikube"
 export TERRAFORM_HOME="/opt/softwares/terraform"
 
+# ----------------------------------------------------------------------------
+# SOURCE ADDITIONAL FILES
+# ----------------------------------------------------------------------------
 source /opt/softwares/.kubectl_aliases
+source /opt/ros/neotic/setup.bash
 
 export PATH="$SBT_HOME/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$KUBECTL_HOME:$TERRAFORM_HOME:$MINIKUBE_HOME:$PATH:/usr/local/bin"
 
