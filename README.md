@@ -35,4 +35,6 @@ Add the following line to source the bash setup file (.bash_profile) for running
 source /opt/ros/noetic/setup.bash
 ```
 
+Make sure to adapt the ROS distribution accordingly. Here in this case it is the noetic for me on my Ubuntu 20.04
+
 
