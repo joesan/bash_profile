@@ -8,6 +8,7 @@ export RUSTUP_HOME="/opt/softwares/rustup"
 export KUBECTL_HOME="/opt/softwares/kubectl"
 export MINIKUBE_HOME="/opt/softwares/minikube"
 export TERRAFORM_HOME="/opt/softwares/terraform"
+export CATKIN_WS_HOME="~/Projects/Private/ros-projects/ros_ws"
 
 # ----------------------------------------------------------------------------
 # SOURCE ADDITIONAL FILES
@@ -62,6 +63,13 @@ alias cic='set completion-ignore-case On' # Make tab completion case insensitive
 mkdircd() { mkdir -p "$1" && cd "$1"; } # Makes new directory and jumps inside
 # lr:  Full Recursive Directory Listing
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+
+# -----------------------------------------------------------------------------
+# ROS ALIAS
+# -----------------------------------------------------------------------------
+alias cw='cd $CATKIN_WS_HOME'
+alias cs='cd $CATKIN_WS_HOME/src'
+alias cm='catkin_make'
 
 # -----------------------------------------------------------------------------
 # NETWORKING ALIAS
