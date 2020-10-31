@@ -44,6 +44,7 @@ alias ros-projects='cd /home/$USER/Projects/Private/ros-projects'
 # ----------------------------------------------------------------------------
 # TERMINAL ALIAS
 # ----------------------------------------------------------------------------
+alias ssr='simplescreenrecorder'
 alias cdd='cd; cls'
 alias ls='lsd -al'
 alias sls='sudo lsd -al'
