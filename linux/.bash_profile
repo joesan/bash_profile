@@ -64,6 +64,10 @@ alias cic='set completion-ignore-case On' # Make tab completion case insensitive
 mkdircd() { mkdir -p "$1" && cd "$1"; } # Makes new directory and jumps inside
 # lr:  Full Recursive Directory Listing
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+# Git commit
+commit(){
+  git add --all . && git commit -m '$1' && git push origin master
+}
 
 # -----------------------------------------------------------------------------
 # ROS ALIAS
