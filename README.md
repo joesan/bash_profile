@@ -33,6 +33,7 @@ joesan@joesan-:/opt$
 ```
 sudo sh -c '(echo "#!/usr/bin/env sh" && curl -L https://github.com/lihaoyi/Ammonite/releases/download/2.2.0/2.13-2.2.0) > /usr/local/bin/amm && chmod +x /usr/local/bin/amm' && amm
 ```
+After installing Ammonite REPL, you should have the .ammonite folder in your home directory. Copy the predef.sc file from [here](https://github.com/joesan/bash_profile/blob/master/linux/predef.sc) into that directory. This enables certain default libraries to be loaded before hand into your REPL.
 
 ## Additional Steps - Install Rust
 Perform this to install Rust on a specific folder of your choice (in my case on Ubuntu, it is the /opt/softwares folder)
