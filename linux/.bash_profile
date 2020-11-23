@@ -66,7 +66,7 @@ mkdircd() { mkdir -p "$1" && cd "$1"; } # Makes new directory and jumps inside
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 # Git commit
 commit(){
-  git add --all . && git commit -m \"$1\" && git push origin master
+  git add --all . && git commit -m "'$1'" && git push origin master
 }
 
 # -----------------------------------------------------------------------------
