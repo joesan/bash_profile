@@ -76,6 +76,7 @@ alias services='service --status-all'
 alias cw='cd $CATKIN_WS_HOME'
 alias cs='cd $CATKIN_WS_HOME/src'
 alias cm='catkin_make'
+alias rosversion='rosversion -d'
 
 # -----------------------------------------------------------------------------
 # NETWORKING ALIAS
