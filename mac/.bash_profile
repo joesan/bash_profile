@@ -47,6 +47,8 @@ alias private-projects='cd /Users/$USER/Projects/Private'
 alias python-projects='/Users/$USER/Projects/Private/python-projects'
 alias plant-simulator='cd /Users/$USER/Projects/Private/scala-projects/plant-simulator'
 alias ros-projects='cd /home/$USER/Projects/Private/ros-projects'
+alias hardware-projects='cd /home/$USER/Projects/Private/hardware-projects'
+
 # -----------------------------
 # TERMINAL ALIAS
 # -----------------------------
