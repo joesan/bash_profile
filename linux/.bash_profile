@@ -69,6 +69,10 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 commit(){
   git add --all . && git commit -m "'$1'" && git push origin master
 }
+# Git commit scala project with sbt header plugin
+sbtcommit(){
+  sbt chechHeader && commit
+}
 # List all the services
 alias services='service --status-all'
 # -----------------------------------------------------------------------------
