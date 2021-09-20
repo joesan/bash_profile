@@ -9,6 +9,7 @@ export KUBECTL_HOME="/opt/softwares/kubectl"
 export MINIKUBE_HOME="/opt/softwares/minikube"
 export TERRAFORM_HOME="/opt/softwares/terraform"
 export CATKIN_WS_HOME="~/Projects/Private/ros-projects/ros_ws"
+export SPARK_HOME="/opt/softwares/spark"
 
 # ----------------------------------------------------------------------------
 # SOURCE ADDITIONAL FILES
@@ -18,7 +19,7 @@ source /opt/ros/neotic/setup.bash
 # Dynamically source all setup.bash files from multiple catkin ros workspaces
 while read -r f ; do source "$f" ;  done < <(find /home/$USER/Projects -wholename '*/devel/setup.bash')
 
-export PATH="$SBT_HOME/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$KUBECTL_HOME:$TERRAFORM_HOME:$MINIKUBE_HOME:$PATH:/usr/local/bin"
+export PATH="$JAVA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$SBT_HOME/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$RUSTUP_HOME:$ROS_ROOT:$KUBECTL_HOME:$TERRAFORM_HOME:$MINIKUBE_HOME:$PATH:/usr/local/bin"
 
 # ----------------------------------------------------------------------------
 # START / STOP COMMANDS
