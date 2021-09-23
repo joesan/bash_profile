@@ -7,6 +7,7 @@
 I have installed few additional softwares on my Linux machine and I have used an alais to launch them. Here is a list of Software that I have installed:
 
 1. SimpleScreenRecorder - https://www.maartenbaert.be/simplescreenrecorder/
+2. Java - https://petewan.com/blog-post/install-and-manage-multiple-java-jdk-and-jre-versions-on-ubuntu-20-04/
 
 ## For Linux
 1. Make sure to source the .bash_profile in the .bashrc as below (Add the contents below to .bashrc)
