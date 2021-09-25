@@ -10,6 +10,7 @@ export MINIKUBE_HOME="/opt/softwares/minikube"
 export TERRAFORM_HOME="/opt/softwares/terraform"
 export CATKIN_WS_HOME="~/Projects/Private/ros-projects/ros_ws"
 export SPARK_HOME="/opt/softwares/spark"
+export ZEPPELIN_HOME="opt/softwares/zeppelin-0.10.0-bin-all"
 
 # ----------------------------------------------------------------------------
 # SOURCE ADDITIONAL FILES
@@ -73,6 +74,10 @@ commit(){
 sbtcommit(){
   sbt chechHeader && commit
 }
+# Zeppelin Notebook Start & Stop
+alias zstart='zeppelin-daemon.sh start'
+alias zstop='zeppelin-daemon.sh stop'
+
 # List all the services
 alias services='service --status-all'
 # -----------------------------------------------------------------------------
