@@ -37,6 +37,12 @@ sudo sh -c '(echo "#!/usr/bin/env sh" && curl -L https://github.com/lihaoyi/Ammo
 ```
 After installing Ammonite REPL, you should have the .ammonite folder in your home directory. Copy the predef.sc file from [here](https://github.com/joesan/bash_profile/blob/master/linux/predef.sc) into that directory. This enables certain default libraries to be loaded before hand into your REPL.
 
+## Additional Steps - Multiple Java versions
+
+```
+sudo update-alternatives --config java
+```
+
 ## Additional Steps - Install Rust
 Perform this to install Rust on a specific folder of your choice (in my case on Ubuntu, it is the /opt/softwares folder)
 
