@@ -48,6 +48,9 @@ Perform this to install Rust on a specific folder of your choice (in my case on 
 
 1. curl https://sh.rustup.rs -sSf | sudo RUSTUP_HOME=/opt/softwares/rustup sh -s -- -y
 
+## Additional Steps - Install pyenv
+To manage multipl Python versions at ease, install pyenv. Follow the install instructions from [here](https://github.com/pyenv/pyenv)
+
 ## Additional Steps - Install ROS
 Add the following line to source the bash setup file (.bash_profile) for running ROS
 
