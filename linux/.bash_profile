@@ -68,6 +68,13 @@ alias cls='clear'
 alias path='echo -e ${PATH//:/\\n}'
 alias cic='set completion-ignore-case On' # Make tab completion case insensitive
 mkdircd() { mkdir -p "$1" && cd "$1"; } # Makes new directory and jumps inside
+# Move the directory structure of a folder as it to the target location
+move() {
+  # create directories up to one level up
+  mkdir -p "`dirname "$2"`"
+  mv "$1" "$2"
+}
+
 # lr:  Full Recursive Directory Listing
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 # Git commit
