@@ -11,6 +11,7 @@ export TERRAFORM_HOME="/opt/softwares/terraform"
 export CATKIN_WS_HOME="~/Projects/Private/ros-projects/ros_ws"
 export SPARK_HOME="/opt/softwares/spark"
 export ZEPPELIN_HOME="opt/softwares/zeppelin-0.10.0-bin-all"
+export PYENV_HOME="/opt/softwares/pyenv"
 
 # ----------------------------------------------------------------------------
 # SOURCE ADDITIONAL FILES
@@ -21,6 +22,9 @@ source /opt/ros/neotic/setup.bash
 while read -r f ; do source "$f" ;  done < <(find /home/$USER/Projects -wholename '*/devel/setup.bash')
 
 export PATH="$JAVA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$SBT_HOME/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$RUSTUP_HOME:$ROS_ROOT:$KUBECTL_HOME:$TERRAFORM_HOME:$MINIKUBE_HOME:$PATH:/usr/local/bin"
+
+# PYENV PATH 
+export PATH=$(pyenv root)/shims:$PATH
 
 # ----------------------------------------------------------------------------
 # START / STOP COMMANDS
@@ -74,6 +78,7 @@ commit(){
 sbtcommit(){
   sbt chechHeader && commit
 }
+
 # Zeppelin Notebook Start & Stop
 alias zstart='zeppelin-daemon.sh start'
 alias zstop='zeppelin-daemon.sh stop'
