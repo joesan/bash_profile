@@ -1,8 +1,11 @@
 # ----------------------------------------------------------------------------
 # SOFTWARE PATH & HOME LOCATIONS
 # ----------------------------------------------------------------------------
+export JAVA_HOME_11="/opt/softwares/java/usr/lib/jvm/jdk-11.0.10"
+export JAVA_HOME_8="/usr/lib/jvm/java-8-openjdk-amd64"
 export MAVEN_HOME="/opt/softwares/apache-maven-3.6.3"
-export SCALA_HOME="/opt/softwares/scala-2.13.3"
+export SCALA_HOME_2_12="/opt/softwares/scala-2.12.2"
+export SCALA_HOME_2_13="/opt/softwares/scala-2.13.3"
 export SBT_HOME="/opt/softwares/sbt"
 export RUSTUP_HOME="/opt/softwares/rustup"
 export KUBECTL_HOME="/opt/softwares/kubectl"
@@ -21,7 +24,7 @@ source /opt/ros/neotic/setup.bash
 # Dynamically source all setup.bash files from multiple catkin ros workspaces
 while read -r f ; do source "$f" ;  done < <(find /home/$USER/Projects -wholename '*/devel/setup.bash')
 
-export PATH="$JAVA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$SBT_HOME/bin:$SCALA_HOME/bin:$MAVEN_HOME/bin:$RUSTUP_HOME:$ROS_ROOT:$KUBECTL_HOME:$TERRAFORM_HOME:$MINIKUBE_HOME:$PATH:/usr/local/bin"
+export PATH="$JAVA_HOME_8/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$SBT_HOME/bin:$SCALA_HOME_2_13/bin:$MAVEN_HOME/bin:$RUSTUP_HOME:$ROS_ROOT:$KUBECTL_HOME:$TERRAFORM_HOME:$MINIKUBE_HOME:$PATH:/usr/local/bin"
 
 # PYENV PATH 
 export PATH=$(pyenv root)/shims:$PATH
