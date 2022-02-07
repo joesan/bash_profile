@@ -98,9 +98,9 @@ alias services='service --status-all'
 # -----------------------------------------------------------------------------
 # ROS ALIAS
 # -----------------------------------------------------------------------------
-alias cw='cd $CATKIN_WS_HOME'
-alias cs='cd $CATKIN_WS_HOME/src'
-alias cm='catkin_make'
+alias roscw='cd $CATKIN_WS_HOME'
+alias roscs='cd $CATKIN_WS_HOME/src'
+alias roscm='catkin_make'
 alias rosversion='rosversion -d'
 
 # -----------------------------------------------------------------------------
