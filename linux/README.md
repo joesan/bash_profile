@@ -28,7 +28,7 @@ drwxrwxr-x  5 root   root       4096 Jul 15 09:23 tuxedo-control-center
 joesan@joesan-:/opt$ 
 ```
 
-3. Additionally, I disbaled docker upon startup. Have a look at the post [here](https://stackoverflow.com/questions/62961427/disable-docker-upon-startup-in-ubuntu-20-04)
+3. Additionally, I disbaled docker upon startup. Have a look at this Stackoverflow post [here](https://stackoverflow.com/questions/62961427/disable-docker-upon-startup-in-ubuntu-20-04)
 
 3. Install Ammonite Scala REPL
 
