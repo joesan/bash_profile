@@ -59,3 +59,7 @@ source /opt/ros/noetic/setup.bash
 ```
 
 Make sure to adapt the ROS distribution accordingly. Here in this case it is the noetic for me on my Ubuntu 20.04
+
+## Additional Steps - Install Ammonite REPL for Scala
+
+The predef.sc file is where all the needed imports are configured so that Ammonite can load them when we start the Ammonite shell
