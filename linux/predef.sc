@@ -9,7 +9,7 @@ import $ivy.`com.github.chocpanda::scalacheck-magnolia:0.3.1`
 import $ivy.`io.chrisdavenport::cats-scalacheck:0.2.0`
 import $ivy.`net.ruippeixotog::scala-scraper:2.2.0`
 import $ivy.`com.softwaremill.sttp.client3::core:3.1.9`
-import $ivy.`joda-time::joda-time:2.10.14`
+import $ivy.`com.github.nscala-time::nscala-time:2.30.0`
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 import scala.concurrent.Future
@@ -30,5 +30,6 @@ import monix.execution.Ack.Continue
 import monix.execution.{Ack, Scheduler}
 import monix.reactive.observers.Subscriber
 import monix.execution.Scheduler.Implicits.global
+import com.github.nscala_time.time.Imports._
 import org.joda.time.{DateTime, Days, Interval, Weeks}
 import scala.math.Integral.Implicits._
