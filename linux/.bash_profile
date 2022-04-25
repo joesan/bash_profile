@@ -41,6 +41,11 @@ alias dockerStopAll='docker stop $(docker ps -aq)'
 alias dockerRemoveAll='docker rm $(docker ps -aq)'
 
 # ----------------------------------------------------------------------------
+# MICROK8S ALIAS
+# ----------------------------------------------------------------------------
+alias mks='microk8s'
+
+# ----------------------------------------------------------------------------
 # PROJECT FOLDER ALIAS
 # ----------------------------------------------------------------------------
 alias rust-projects='cd /home/$USER/Projects/Private/rust-projects'
