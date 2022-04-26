@@ -44,6 +44,7 @@ alias dockerRemoveAll='docker rm $(docker ps -aq)'
 # MICROK8S ALIAS
 # ----------------------------------------------------------------------------
 alias mks='microk8s'
+alias mks.enable='microk8s.enable'
 
 # ----------------------------------------------------------------------------
 # PROJECT FOLDER ALIAS
