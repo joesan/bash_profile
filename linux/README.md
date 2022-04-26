@@ -43,6 +43,9 @@ After installing Ammonite REPL, you should have the .ammonite folder in your hom
 sudo update-alternatives --config java
 ```
 
+## Additional Steps - Install MicroK8s
+Follow the instructions to install Microk8s on Ubtunu - https://microk8s.io/docs
+
 ## Additional Steps - Install Rust
 Perform this to install Rust on a specific folder of your choice (in my case on Ubuntu, it is the /opt/softwares folder)
 
