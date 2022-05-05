@@ -26,8 +26,10 @@ while read -r f ; do source "$f" ;  done < <(find /home/$USER/Projects -wholenam
 
 export PATH="$JAVA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$SBT_HOME/bin:$SCALA_HOME_2_13/bin:$MAVEN_HOME/bin:$RUSTUP_HOME:$ROS_ROOT:$KUBECTL_HOME:$TERRAFORM_HOME:$MINIKUBE_HOME:$PATH:/usr/local/bin"
 
-# PYENV PATH 
+# pyenv virtual environmenmt
 export PATH=$(pyenv root)/shims:$PATH
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # ----------------------------------------------------------------------------
 # START / STOP COMMANDS
