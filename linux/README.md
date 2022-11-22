@@ -66,3 +66,7 @@ Make sure to adapt the ROS distribution accordingly. Here in this case it is the
 ## Additional Steps - Install Ammonite REPL for Scala
 
 The predef.sc file is where all the needed imports are configured so that Ammonite can load them when we start the Ammonite shell
+
+## Additional Steps - Install NordVPN
+
+https://support.nordvpn.com/Connectivity/Linux/1325531132/Installing-and-using-NordVPN-on-Debian-Ubuntu-Raspberry-Pi-Elementary-OS-and-Linux-Mint.htm
