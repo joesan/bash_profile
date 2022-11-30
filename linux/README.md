@@ -46,6 +46,13 @@ sudo update-alternatives --config java
 ## Additional Steps - Install MicroK8s
 Follow the instructions to install Microk8s on Ubtunu - https://microk8s.io/docs
 
+## Additional Steps - Install cool retro terminal
+Follow the instructions to install cool retro terminal on Ubuntu - https://github.com/Swordfish90/cool-retro-term
+
+```
+sudo snap install cool-retro-term --classic
+```
+
 ## Additional Steps - Install Rust
 Perform this to install Rust on a specific folder of your choice (in my case on Ubuntu, it is the /opt/softwares folder)
 
