@@ -99,6 +99,10 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 commit(){
   git add --all . && git commit -m "'$1'" && git push origin master
 }
+
+# git shortcut commands
+alias stat='find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '\''(echo {} && cd {} && git status -s && echo)'\'' \;'
+
 # Git commit scala project with sbt header plugin
 sbtcommit(){
   sbt chechHeader && commit
