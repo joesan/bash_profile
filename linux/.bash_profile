@@ -37,6 +37,19 @@ eval "$(pyenv virtualenv-init -)"
 alias docker-start='sudo systemctl start docker'
 
 # ----------------------------------------------------------------------------
+# OPEN-ELECTRONS ALIAS
+# ----------------------------------------------------------------------------
+# ssh alias for the k3s raspi master nodes
+alias m1='ssh joesan@m1.open-electrons.com'
+#alias m2='ssh joesan@m2.open-electrons.com'
+#alias m3='ssh joesan@m3.open-electrons.com'
+
+# ssh alias for the k3s raspi worker nodes
+alias n1='ssh joesan@n1.open-electrons.com'
+#alias n2='ssh joesan@n2.open-electrons.com'
+#alias n3='ssh joesan@n3.open-electrons.com'
+
+# ----------------------------------------------------------------------------
 # DOCKER & KUBERNETES ALIAS
 # ----------------------------------------------------------------------------
 alias dockerStopAll='docker stop $(docker ps -aq)'
