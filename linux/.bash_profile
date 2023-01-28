@@ -49,6 +49,11 @@ alias n1='ssh joesan@n1.open-electrons.com'
 #alias n2='ssh joesan@n2.open-electrons.com'
 #alias n3='ssh joesan@n3.open-electrons.com'
 
+# ansible alias for managing playbooks
+alias ansible-up='ansible-playbook -i inventory/prod/hosts site.yml'
+alias ansible-down='ansible-playbook -i inventory/prod/hosts shutdown.yml'
+alias ansible-check='ansible-playbook site.yml --syntax-check'
+
 # ----------------------------------------------------------------------------
 # DOCKER & KUBERNETES ALIAS
 # ----------------------------------------------------------------------------
