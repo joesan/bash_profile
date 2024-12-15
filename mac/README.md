@@ -4,3 +4,11 @@
 1. Make sure to have lsd installed (https://github.com/Peltoche/lsd)
 
 ## Additional Softwares Installed
+
+To install all the additional softwares in one go, do the following:
+
+'''
+brew bundle --file=brewfile.sh
+'''
+
+Add any additional softwares you need to install to the brewfile.sh and run the above command after you download the brewfile locally.
