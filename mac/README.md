@@ -12,3 +12,7 @@ brew bundle --file=brewfile.sh
 '''
 
 Add any additional softwares you need to install to the brewfile.sh and run the above command after you download the brewfile locally.
+
+## iTerm 2 
+
+Go here (https://iterm2colorschemes.com/) to set up the color themes for the iTerm2
