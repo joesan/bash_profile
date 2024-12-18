@@ -4,8 +4,7 @@
 # Set Paths
 # -----------------------------------------------------
 # For Java & Scala projects
-export JAVA_HOME_8_131="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/"
-export JAVA_HOME_8="/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/"
+export JAVA_HOME_23="/Library/Java/JavaVirtualMachines/jdk-23.jdk/Contents/Home/"
 export JAVA_HOME_11="/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/"
 export SBT_HOME="/Users/$USER/Softwares/sbt/sbt-1.2.8"
 export SCALA_HOME="/Users/$USER/Softwares/scala/scala-2.12.7"
