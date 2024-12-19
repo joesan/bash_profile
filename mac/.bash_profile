@@ -150,5 +150,25 @@ alias kserv='kubectl get svc'
 alias dockerStopAll='docker stop $(docker ps -aq)'
 alias dockerRemoveAll='docker rm $(docker ps -aq)'
 
-export PATH=$PATH:/Users/jothi/Softwares/azure-cli/bin
-export PATH="$HOME/.cargo/bin:$PATH"d
+# ---------------------------
+# EXPORT PATH's
+# ---------------------------
+export PATH=$PATH:/Users/$USER/Softwares/azure-cli/bin
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# --------------------------
+# COLOR SCHEME FOR USERNAME
+# --------------------------
+PS1="\[\033[0;33m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\]:\[\033[0;33m\]\w\[\033[0m\] $ "
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# -------------------------
+# GIT ALIAS
+# -------------------------
+commit() {
+ git add --all . && git commit -m "'$1'" && git push origin master
+}
