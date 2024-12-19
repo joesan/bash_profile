@@ -168,6 +168,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # -------------------------
 # GIT ALIAS
+# USAGE: user@users-MacBook-Pro:~/Projects/c++-projects/learn-cpp $ commit "added new changes to source code"
 # -------------------------
 commit() {
  git add --all . && git commit -m "'$1'" && git push origin master
