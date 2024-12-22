@@ -75,10 +75,6 @@ alias cls='clear'
 alias path='echo -e ${PATH//:/\\n}'
 alias cic='set completion-ignore-case On' # Make tab completion case insensitive
 mkdircd() { mkdir -p "$1" && cd "$1"; } # Makes new directory and jumps inside
-# Git commit
-commit() {
-  git add --all . && git commit -m \"$1\" && git push origin master
-}
 
 # -----------------------------------
 # RASPBERRY PI ALIAS
