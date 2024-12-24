@@ -166,6 +166,32 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 # GIT ALIAS
 # USAGE: user@users-MacBook-Pro:~/Projects/c++-projects/learn-cpp $ commit "added new changes to source code"
 # -------------------------
-commit() {
+gcommit() {
  git add --all . && git commit -m "'$1'" && git push origin master
 }
+
+alias commit="gcommit"
+alias gstat='git status'
+
+# Function to perform git pull recursively
+git_pull_repos() {
+  # Change to the target directory (current directory by default)
+  target_dir="${1:-.}"
+  echo "Checking for Git repositories in: $target_dir"
+
+  # Loop through all subdirectories in the target directory
+  for dir in "$target_dir"/*; do
+    if [ -d "$dir/.git" ]; then
+      echo "Found Git repository in: $dir"
+      cd "$dir" || continue
+      echo "Running 'git pull' in $(pwd)..."
+      git pull
+      cd - > /dev/null || exit
+    else
+      echo "Skipping: $dir (not a Git repository)"
+    fi
+  done
+}
+
+# Alias or shortcut for convenience (optional)
+alias gpall="git_pull_repos"
